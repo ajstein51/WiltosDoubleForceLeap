@@ -5,7 +5,7 @@ hook.Add("SetupMove", "WOSDoubleForceJump", function(ply, mvd, cmd)
 	local wep = ply:GetActiveWeapon()
 	if not IsValid( wep ) then return end -- Check if weapon is valid
 	if not wep.IsLightsaber then return end -- Is the weapon a lightsaber?
-	if wep:GetForce() < 30 then return end -- Does the lightsaber have at least 10 force power?
+	if wep:GetForce() < 30 then return end -- Does the lightsaber have at least 30 force power? Change this line and line 36 to change how much this cost
 
 	if ply:OnGround() then 
 		ply.ForceJumpLevel = 0
